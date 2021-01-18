@@ -1,0 +1,230 @@
+@import 'responsive-mixin';
+
+:root {
+    --base-gutter: 1em;
+    --bp-xs: 480px;
+    --bp-s: 624px;
+    --bp-sm: 768px;
+    --bp-m: 896px;
+    --bp-md: 1024px;
+    --bp-l: 1200px;
+    --bp-lg: 1440px;
+
+    @include respond-from(m) {
+        --base-gutter: 3em;
+    }
+}
+
+body {
+    font-family: 'Niramit', sans-serif;
+    font-size: 18px;
+}
+
+p {
+    line-height: 2;
+}
+
+
+a,
+a:visited,
+a:active,
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.lang-switcher {
+    position: absolute;
+    display: flex;
+    margin: 0 auto;
+    @include respond-until(m) {
+        padding: 0 var(--base-gutter);
+        width: calc(100% - (var(--base-gutter) * 2));
+        justify-content: space-evenly;
+    }
+    @include respond-from(m) {
+        right: 0;
+        padding: 1em;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        padding: 1em;
+        line-height: 0;
+        color: #ffffff;
+        cursor: pointer;
+        filter: drop-shadow(0px 1px 3px rgba(0,0,0,0.4));
+        @include respond-until(m) {
+            span {
+                display: none;
+            }
+        }
+        &[data-lang]:before {
+            content: '';
+            display: block;
+            width: 1em;
+            height: 0.8em;
+            filter: none;
+            @include respond-from(m) {
+                margin-right: 0.5em;
+            }
+        }
+        &[data-lang="nb"]:before {
+            background-image: url('../icons/nb.svg');
+        }
+        &[data-lang="en"]:before {
+            background-image: url('../icons/en.svg');
+        }
+        &[data-lang="es"]:before {
+            background-image: url('../icons/es.svg');
+        }
+    }
+}
+
+.Hero {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 35vw;
+    background-image: url('../img/code-1500.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .site-logo {
+        padding: 0 1em;
+        margin: 0 auto;
+        @include respond-until(m) {
+            margin-top: var(--base-gutter);
+        }
+        img {
+            max-width: 100%;
+            width: 80vw;
+            height: auto;
+            @include respond-from(m) {
+                width: var(--bp-sm);
+            }
+            @include respond-from(l) {
+                width: var(--bp-md);
+            }
+        }
+    }
+    .hero-overlay,
+    .site-logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+.Title {
+    margin: calc(var(--base-gutter) / 2);
+    @include respond-from(m) {
+        margin: var(--base-gutter);
+    }
+}
+
+.ImageAndText {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--base-gutter);
+    padding: 0 var(--base-gutter);
+    margin: var(--base-gutter) auto;
+    @include respond-from(m) {
+        grid-template-columns: 2fr 1fr 2fr;
+        margin: calc(var(--base-gutter) * 2) auto;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        @include respond-from(m) {
+            grid-row: 1 / span 2;
+            &.right {
+                grid-column: 2 / span 2;
+                & ~ h2,
+                & ~ p {
+                    grid-column: 1;
+                }
+            }
+            &.left {
+                grid-column: 1 / span 2;
+                & ~ h2,
+                & ~ p {
+                    grid-column: 3;
+                }
+            }
+        }
+    }
+}
+
+.Info {
+    padding: var(--base-gutter);
+    background-color: #0100c0;
+    color: #ffffff;
+    text-align: center;
+    @include respond-from(s) {
+        padding: var(--base-gutter) calc(var(--base-gutter) * 3);
+    }
+    img {
+        width: 3em;
+        height: auto;
+        filter: invert(1);
+    }
+    h2 {
+        line-height: var(--base-gutter);
+        @include respond-until(m) {
+            margin: calc(var(--base-gutter) * 1.5) 0;
+        }
+    }
+}
+
+.Footer {
+    display: grid;
+    padding: var(--base-gutter);
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 2;
+    @include respond-from(s) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    address {
+        font-style: normal;
+    }
+    section {
+        text-align: right;
+    }
+    address, 
+    section {
+        display: flex;
+        flex-direction: column;
+        @include respond-until(s) {
+            text-align: center;
+        }
+    }
+    img {
+        margin: 0 auto;
+        align-self: center;
+        @include respond-until(s) {
+            padding: var(--base-gutter);
+            max-width: 50vw;
+            grid-row: 3;
+        }
+    }
+}
+
+.Hero,
+.Title,
+.ImageAndText,
+.Footer {
+    @include respond-from(l) {
+        padding-left: calc((100vw - var(--bp-l)) / 2);
+        padding-right: calc((100vw - var(--bp-l)) / 2);
+    }
+}
+
+.Hero,
+.ImageAndText,
+.Footer {
+    @include respond-from(l) {
+        width: calc(100% - (100vw - var(--bp-l)));
+    }
+}

@@ -1,0 +1,133 @@
+{
+  "modules":[
+    {
+      "name":"Grensesnitt"
+    },
+    {
+      "type":"Hero",
+      "image":{
+        "file":"code-1500.jpg"
+      },
+      "overlay":{
+        "image":{
+          "position":"center",
+          "file":"logo-white-colors.svg",
+          "alt":"Grensesnitt logo"
+        }
+      }
+    },
+    {
+      "type":"Title",
+      "text":{
+        "nb":"Vi lager grensesnitt som folk elsker.",
+        "en":"We create interfaces people love.",
+        "es":"Creamos interfaces que a la gente le gusta."
+      }
+    },
+    {
+      "type":"ImageAndText",
+      "text":{
+        "title":{
+          "nb":"",
+          "en":"",
+          "es":""
+        },
+        "body":{
+          "nb":"Grensesnitt er Bjørnar, Vegard, Martha, Hege og Bjørn. Vi blir glade av å hjelpe deg med å få en enklere og mer effektiv hverdag. Dette gjør vi gjennom å utvikle mobilapper, webbaserte applikasjoner og å bygge komponentbaserte nettsider. Vi samarbeider med dyktige designere som lar oss utforme spennende og krevende nettsider og webapplikasjoner.",
+          "en":"Grensesnitt is Bjørnar, Vegard, Martha, Hege and Bjørn. We are happy to help you have a simpler and more efficient everyday life. We do this by developing mobile apps, web-based applications and building component-based websites. We work with skilled designers who allow us to design exciting and demanding websites and web applications.",
+          "es":"Grensesnitt es Bjørnar, Vegard, Martha, Hege y Bjørn. Nos complace ayudarlo a tener una vida cotidiana más simple y eficiente. Hacemos esto mediante el desarrollo de aplicaciones móviles, aplicaciones basadas en la web y la construcción de sitios web basados ​​en componentes. Trabajamos con diseñadores calificados que nos permiten diseñar sitios web y aplicaciones web interesantes y exigentes."
+        }
+      },
+      "image":{
+        "position":"right",
+        "file":"grensesnitt-alle-tilsette-sept-2020.jpg",
+        "alt":{
+          "nb":"Grensesnitt ansatte",
+          "en":"Grensesnitt team",
+          "es":"Equipo Grensesnitt"
+        }
+      }
+    },
+    {
+      "type":"ImageAndText",
+      "text":{
+        "title":{
+          "nb":"Om oss",
+          "en":"About us",
+          "es":"Sobre nosotros"
+        },
+        "body":{
+          "nb":"Vi har kontor i 9. etasje i Høghuset på Bryne og nyter utsikten over Jæren når vi ikke kikker konsentrert på skjermene våre. Felles for alt vi gjør er at vi liker å samarbeide med kunder, partnere og andre leverandører for å lage ting som er enkle å bruke – både for deg og for kunden din.",
+          "en":"We have an office on the 9th floor in Høghuset at Bryne and enjoy the view of Jæren when we are not concentrating on our screens. Common to everything we do is that we like to work with customers, partners and other suppliers to create things that are easy to use - both for you and for your customer.",
+          "es":"Tenemos una oficina en el noveno piso en Høghuset en Bryne y disfrutamos de la vista de Jæren cuando no estamos concentrados en nuestras pantallas. Lo común a todo lo que hacemos es que nos gusta trabajar con clientes, socios y otros proveedores para crear cosas que sean fáciles de usar, tanto para usted como para su cliente."
+        }
+      },
+      "image":{
+        "position":"left",
+        "file":"view.jpg",
+        "alt":{
+          "nb":"Grensesnitt kontor utsikten",
+          "en":"Grensesnitt office view",
+          "es":"La vista de la oficina Grensesnitt"
+        }
+      }
+    },
+    {
+      "type":"Info",
+      "image":{
+        "file":"person-sign-light.svg",
+        "alt":{
+          "nb":"Ikon for person som holder et skilt",
+          "en":"Icon of person holding a sign",
+          "es":"Icono de una persona con un cartel"
+        }
+      },
+      "text":{
+        "title":{
+          "nb":"Lyst til å bli en del av Grensesnitt?",
+          "en":"Want to be a part of Grensesnitt?",
+          "es":"¿Quieres formar parte de Grensesnitt?"
+        },
+        "body":{
+          "nb":"Vi er alltid interessert i å treffe kjekke og flinke folk, så ta gjerne kontakt med Bjørnar om du vil ta en kaffe og en prat.",
+          "en":"We are always interested in meeting cool and interesting people, so feel free to contact Bjørnar if you want to have a coffee and a chat.",
+          "es":"Siempre estamos interesados ​​en conocer gente interesante y genial, así que no dudes en contactar a Bjørnar si quieres tomar un café y charlar."
+        }
+      }
+    },
+    {
+      "type":"Footer",
+      "left":{
+        "title":{
+          "nb":"Besøk oss",
+          "en":"Visit us",
+          "es":"Visítanos"
+        },
+        "body":"Høghuset",
+        "building":{
+          "nb":"Forum Jæren, 9. etg",
+          "en":"Forum Jæren, 9th floor",
+          "es":"Forum Jæren, 9no piso"
+        },
+        "address":"Hetlandsgata 9, 4344 Bryne"
+      },
+      "center":{
+        "image":{
+          "position":"center",
+          "file":"logo-white-colors.svg",
+          "alt":"Grensesnitt logo"
+        }
+      },
+      "right":{
+        "title":{
+          "nb":"Kontakt oss",
+          "en":"Contact us",
+          "es":"Contáctanos"
+        },
+        "email":"bjornar@grensesnitt.no",
+        "emailText":"bjornar at grensesnitt.no",
+        "phone":"+47 911 00 918"
+      }
+    }
+  ]
+}
