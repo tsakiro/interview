@@ -80,7 +80,7 @@ var app = new Reef('#app', {
                     domElem = 'header';
                     innerElem = `
                     <a class="site-logo" href="/" rel="home" title="${appName}">
-                        <img src="/assets/img/${module.overlay.image.file}" alt="${appName}" title="${appName}" />
+                        <img src="./assets/img/${module.overlay.image.file}" alt="${appName}" title="${appName}" />
                     </a>`;
                     break;
 
@@ -94,14 +94,14 @@ var app = new Reef('#app', {
                     innerElem = `
                     <h2>${module.text.title[currentLang]}</h2>
                     <p>${module.text.body[currentLang]}</p>
-                    <img src="/assets/img/${module.image.file}" alt="${module.image.alt[currentLang]}" title="${module.image.alt[currentLang]}" class="${module.image.position}" />
+                    <img src="./assets/img/${module.image.file}" alt="${module.image.alt[currentLang]}" title="${module.image.alt[currentLang]}" class="${module.image.position}" />
                     `;
                     break;
 
                 case "Info":
                     domElem = 'div';
                     innerElem = `
-                    <img src="/assets/img/${module.image.file}" alt="${module.image.alt[currentLang]}" title="${module.image.alt[currentLang]}" />
+                    <img src="./assets/img/${module.image.file}" alt="${module.image.alt[currentLang]}" title="${module.image.alt[currentLang]}" />
                     <h2>${module.text.title[currentLang]}</h2>
                     <p>${module.text.body[currentLang]}</p>
                     `;
@@ -116,7 +116,7 @@ var app = new Reef('#app', {
                         <span>${module.left.building[currentLang]}</span>
                         ${module.left.address}
                     </address>
-                    <img src="/assets/img/${module.center.image.file}" alt="${appName}" title="${appName}" />
+                    <img src="./assets/img/${module.center.image.file}" alt="${appName}" title="${appName}" />
                     <section>
                         <strong>${module.right.title[currentLang]}</strong>
                         <a href="mailto:${module.right.email}">${module.right.emailText}</a>
