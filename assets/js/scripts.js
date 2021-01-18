@@ -6,6 +6,7 @@ fetch('./assets/js/content.json').then(function (response) {
 });
 
 // Get cookie by name or value
+document.cookie = "lang=nb;"; // Set lang to Norwegian by default
 function getCookie(input) {
     var cookies = document.cookie.split(';');
     for (var i = 0; i < cookies.length; i++) {
