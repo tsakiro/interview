@@ -1,25 +1,25 @@
-// Fetch content data
-fetch('./assets/js/content.json').then(function (response) {
-	return response.json();
-}).then(function (data) {
-    app.data.modules = data.modules;
-});
-
 // Get cookie by name or value
-document.cookie = "lang=nb;"; // Set lang to Norwegian by default
-function getCookie(input) {
-    var cookies = document.cookie.split(';');
-    for (var i = 0; i < cookies.length; i++) {
-        var name = cookies[i].split('=')[0].toLowerCase();
-        var value = cookies[i].split('=')[1].toLowerCase();
-        if (name === input) {
-            return value;
-        } else if (value === input) {
-            return name;
+function getCookie(c_name) {
+    var c_value = document.cookie,
+        c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1) c_start = c_value.indexOf(c_name + "=");
+    if (c_start == -1) {
+        c_value = null;
+    } else {
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1) {
+            c_end = c_value.length;
         }
+        c_value = unescape(c_value.substring(c_start, c_end));
     }
-    return "";
-};
+    return c_value;
+}
+
+// Set lang to Norwegian by default
+if (!getCookie('lang')) {
+    document.cookie = "lang=nb;";
+}
 
 // Use cookie value to set the document language and fetch the correct content from the json
 function setLang(langCode) {
@@ -140,4 +140,11 @@ var app = new Reef('#app', {
         }).join('')}
     `;
     }
+});
+
+// Fetch content data
+fetch('./assets/js/content.json').then(function (response) {
+	return response.json();
+}).then(function (data) {
+    app.data.modules = data.modules;
 });
